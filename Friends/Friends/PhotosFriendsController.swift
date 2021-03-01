@@ -11,7 +11,6 @@ class PhotosFriendsController: UICollectionViewController {
     
     var displayedName: User?
     
-    var myFriends = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +22,14 @@ class PhotosFriendsController: UICollectionViewController {
         return 1
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myFriends.count
+        return displayedName?.friend.count ?? 0
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosFriendsCell", for: indexPath) as? PhotosCell else { return UICollectionViewCell() }
-        cell.friendsPhoto?.image = myFriends[indexPath.row].photo
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosFriendsCell", for: indexPath) as? PhotosCell,
+              let friend = displayedName?.friend [indexPath.item] else { return UICollectionViewCell() }
+        cell.configure(with: friend)
+        
         return cell
         
         

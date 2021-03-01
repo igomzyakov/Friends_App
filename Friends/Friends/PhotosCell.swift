@@ -10,6 +10,11 @@ import UIKit
 class PhotosCell: UICollectionViewCell {
     
     @IBOutlet var friendsPhoto: UIImageView!
+ 
+    
+    func configure(with forecast: Friend) {
+        friendsPhoto.image = forecast.photo
+    }
     
 }
     

@@ -11,5 +11,5 @@ class FriendsCell: UITableViewCell {
 
     @IBOutlet var avatarFriends: UIImageView!
     @IBOutlet var labelFriends: UILabel!
-    
+ 
 }

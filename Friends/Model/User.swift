@@ -7,8 +7,14 @@
 
 import UIKit
 
-struct User {
+struct User: Equatable {
     let name: String
     let avatar: UIImage?
-    let photo: UIImage?
+    let friend: [Friend]
 }
+
+struct Friend:Equatable {
+    let photo: UIImage?
+    
+} 
+

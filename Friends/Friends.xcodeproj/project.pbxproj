@@ -22,6 +22,7 @@
 		1D51E5EF25DD819400EE1F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D51E5ED25DD819400EE1F3A /* Main.storyboard */; };
 		1D51E5F125DD819600EE1F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D51E5F025DD819600EE1F3A /* Assets.xcassets */; };
 		1D51E5F425DD819600EE1F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D51E5F225DD819600EE1F3A /* LaunchScreen.storyboard */; };
+		1D5B334925EB78B300A468D5 /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5B334825EB78B300A468D5 /* customView.swift */; };
 		1DA6C50625E2C7AB00BC7BA1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D5F57E025E2C5EA008FCE54 /* Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		1D51E5EE25DD819400EE1F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D51E5F025DD819600EE1F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D51E5F325DD819600EE1F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D5B334825EB78B300A468D5 /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		1D5F57DF25E2C5EA008FCE54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				1D2C5F7025E1C00D00181E5E /* Group.swift */,
+				1D5B334825EB78B300A468D5 /* customView.swift */,
 				1D2C5F6C25E1BFE100181E5E /* User.swift */,
 			);
 			path = Model;
@@ -187,6 +190,7 @@
 				1D2C5F7C25E1C1FB00181E5E /* AllGroupsController.swift in Sources */,
 				1D2C5F7F25E1C21C00181E5E /* GroupsCell.swift in Sources */,
 				1D2C5F6525E1BE3500181E5E /* FriendsCell.swift in Sources */,
+				1D5B334925EB78B300A468D5 /* customView.swift in Sources */,
 				1D2C5F5B25E1BD1100181E5E /* FriendsController.swift in Sources */,
 				1D2C5F6925E1BEEA00181E5E /* PhotosCell.swift in Sources */,
 				1D2C5F6D25E1BFE100181E5E /* User.swift in Sources */,

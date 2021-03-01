@@ -9,10 +9,11 @@ import UIKit
 
 class FriendsController: UITableViewController {
     
-    var myFriends = [User(name: "Гомзяков Игорь", avatar: UIImage(named: "igor"), photo:UIImage(named: "igor")),
-                     User(name: "Дьячков Андрей", avatar: UIImage(named: "andrey"), photo: UIImage(named: "andrey")),
-                     User(name: "Колосов Алексей", avatar: UIImage(named: "alex"), photo: UIImage(named: "alex")),
-                     User(name: "Боровский Кирилл", avatar: UIImage(named: "kirill"), photo: UIImage(named: "kirill"))
+    var myFriends = [User(name: "Игорь Гомзяков", avatar: UIImage(named: "igor"), friend: [Friend(photo: UIImage(named: "igor"))]),
+                     User(name: "Алексей Колосов", avatar: UIImage(named: "alex"), friend: [Friend(photo: UIImage(named: "alex"))]),
+                     User(name: "Кирилл Боровский", avatar: UIImage(named: "kirill"), friend: [Friend(photo: UIImage(named: "kirill"))]),
+                     User(name: "Андрей Дьячков", avatar: UIImage(named: "andrey"), friend: [Friend(photo: UIImage(named: "andrey"))])
+                     
     ]
 
     override func viewDidLoad() {
@@ -35,9 +36,6 @@ class FriendsController: UITableViewController {
             cell.labelFriends.text = myFriends[indexPath.row].name
             return cell
      }
-    
-    
-
     
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
