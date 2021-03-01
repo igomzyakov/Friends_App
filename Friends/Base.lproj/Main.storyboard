@@ -177,11 +177,33 @@
                                                 <constraint firstAttribute="height" constant="300" id="rFi-aC-ft1"/>
                                             </constraints>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TC8-lt-c7I">
+                                            <rect key="frame" x="8" y="254" width="21" height="21"/>
+                                            <color key="tintColor" systemColor="systemPinkColor"/>
+                                            <state key="normal" image="heart" catalog="system"/>
+                                            <connections>
+                                                <action selector="like:" destination="XzV-Iz-sKY" eventType="touchUpInside" id="fSX-1G-aFq"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SZ-xO-wzH">
+                                            <rect key="frame" x="33" y="254" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="m2q-el-0m1" firstAttribute="centerY" secondItem="uq1-NR-1vF" secondAttribute="centerY" id="AHR-7t-tkX"/>
+                                        <constraint firstAttribute="bottom" secondItem="6SZ-xO-wzH" secondAttribute="bottom" constant="9" id="Fyr-z6-iWy"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="leading" secondItem="TC8-lt-c7I" secondAttribute="trailing" constant="4" id="LVQ-Vx-Kq8"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="centerY" secondItem="TC8-lt-c7I" secondAttribute="centerY" id="MT7-Wl-bFq"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="baseline" secondItem="TC8-lt-c7I" secondAttribute="baseline" id="Mee-9r-btf"/>
                                         <constraint firstItem="m2q-el-0m1" firstAttribute="leading" secondItem="uq1-NR-1vF" secondAttribute="leading" constant="1.5" id="Rxm-Ef-P7h"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="baseline" secondItem="TC8-lt-c7I" secondAttribute="firstBaseline" id="T3J-bZ-Gwj"/>
                                         <constraint firstAttribute="trailing" secondItem="m2q-el-0m1" secondAttribute="trailing" constant="1.5" id="W97-Rm-Qqv"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="leading" secondItem="uq1-NR-1vF" secondAttribute="leading" constant="33" id="Wbu-Ar-Wd1"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6SZ-xO-wzH" secondAttribute="trailing" constant="20" symbolic="YES" id="YHR-4c-UJc"/>
+                                        <constraint firstItem="6SZ-xO-wzH" firstAttribute="top" secondItem="TC8-lt-c7I" secondAttribute="top" id="ofP-C5-iRS"/>
                                         <constraint firstItem="m2q-el-0m1" firstAttribute="top" secondItem="uq1-NR-1vF" secondAttribute="top" constant="1.5" id="qRU-MA-Est"/>
                                         <constraint firstItem="m2q-el-0m1" firstAttribute="centerX" secondItem="uq1-NR-1vF" secondAttribute="centerX" id="ttR-wr-hUM"/>
                                         <constraint firstAttribute="bottom" secondItem="m2q-el-0m1" secondAttribute="bottom" constant="1.5" id="wHZ-ct-PDO"/>
@@ -190,6 +212,8 @@
                                 <size key="customSize" width="291" height="284"/>
                                 <connections>
                                     <outlet property="friendsPhoto" destination="m2q-el-0m1" id="M98-Ki-Cs1"/>
+                                    <outlet property="likeButton" destination="TC8-lt-c7I" id="slb-EN-b8W"/>
+                                    <outlet property="likesCounter" destination="6SZ-xO-wzH" id="JWE-gI-eec"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -443,6 +467,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
@@ -450,6 +475,9 @@
         <image name="pip.exit" catalog="system" width="128" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

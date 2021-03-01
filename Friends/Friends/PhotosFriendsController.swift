@@ -24,7 +24,7 @@ class PhotosFriendsController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return displayedName?.friend.count ?? 0
     }
-
+// открываем фото друга на полный экран
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosFriendsCell", for: indexPath) as? PhotosCell,
               let friend = displayedName?.friend [indexPath.item] else { return UICollectionViewCell() }

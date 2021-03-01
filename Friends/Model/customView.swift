@@ -8,7 +8,6 @@
 import UIKit
 
 
-@IBDesignable
 
 class customView: UIImageView {
     
@@ -17,7 +16,7 @@ class customView: UIImageView {
         
         layer.cornerRadius = bounds.height / 2
         layer.borderWidth = 3
-        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderColor = UIColor.systemGreen.cgColor
         clipsToBounds = true
     }
 }
@@ -29,7 +28,7 @@ class customView2: UIImageView {
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 4.0
-        layer.shadowRadius = 10
+        layer.shadowRadius = 5
         
         layer.borderColor = UIColor.darkGray.cgColor
         layer.borderWidth = 2
@@ -37,6 +36,7 @@ class customView2: UIImageView {
         layer.cornerRadius = bounds.height / 2
         
         clipsToBounds = false
+        
         
         //let translation3D = CATransform3DMakeTranslation(-10, 10, 100)
         //layer.transform = translation3D
